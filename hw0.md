@@ -6,7 +6,8 @@ Throughout the course, we will use GCC version &ge; 14. Students are recommended
 
 The best and easiest way to set up GCC version 14 is to use Windows subsystem for linux (WSL).
 First, open your Powershell by pressing &#x229E;+R and enter "powershell".
-![Running Powershell](img/powershell.png)
+
+<img src="img/powershell.png" alt="Running Powershell" style="width:30em">
 
 Within powershell, enter the following command to install
 ```bat
@@ -14,10 +15,12 @@ $ wsl --install -d Ubuntu-24.04
 ```
 
 After installing it, you will be able to find Ubuntu-24.04.
-![Ubuntu-24.04](img/ubuntu-24.04.png)
+
+<img src="img/ubuntu-24.04.png" alt="Run Ubuntu-24.04" style="width:30em">
 
 Running it will give you the following terminal.
-![WSL](img/windows-ubuntu-bash.png)
+
+<img src="img/windows-ubuntu-bash.png" alt="Bash shell from WSL" style="width:50em">
 
 Now run the following command to the shell
 ```bash
@@ -70,4 +73,7 @@ Copyright (C) 2024 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
+
+## MacOS
+
 
