@@ -77,4 +77,30 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## MacOS
 
+MacOS users can install gcc version 14 using [homebrew](https://brew.sh/).
+First, open a terminal and enter the following command
+```bash
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Then, follow the "next step" presented in the terminal.
+
+Then
+```bash
+$ brew install gcc
+```
+will install gcc version 14 to a system. Still, it will be installed in `/opt/homebrew/bin`. Without adding it to your terminal, you will run a default `gcc`, which is just `clang`.
+
+Thus, you should run the following lines
+```bash
+$ cd /opt/homebrew/bin/
+$ ln -s gcc-14 gcc
+$ ln -s g++-14 g++
+$ cd -
+$ echo 'export PATH="/opt/homebrew/bin/;$PATH"' >> .zprofile
+```
+
+Then, after reopenning the terminal, you will get
+```bash
+$ gcc --version
+```
 
