@@ -59,7 +59,8 @@ There are 2 choices for the alternative gcc (providing /usr/bin/gcc).
 Press <enter> to keep the current choice[*], or type selection number: 
 ```
 
-Type the number which is for `gcc-14`. Then we will get
+Type the number which is for `gcc-14`. For example, for the above case, Selection "2" is for "gcc-14". Thus, type 2 and press enter &#x23CE;.
+After that, we will get
 ```bash
 $ gcc --version
 gcc (Ubuntu 14.2.0-4ubuntu2~24.04) 14.2.0
