@@ -1,4 +1,4 @@
-# Objective Oriented Programming and Data Structure
+# Object Oriented Programming and Data Structure
 
 GitHub repository for Objective Oriented Programming and Data Structure
 
