@@ -22,7 +22,7 @@ Running it will give you the following terminal.
 
 <img src="img/windows-ubuntu-bash.png" alt="Bash shell from WSL" style="width:50em">
 
-Now run the following command to the shell
+Now run the following command in the shell
 ```bash
 $ sudo apt update
 $ sudo apt install build-essential
@@ -38,7 +38,7 @@ $ gcc --version # This will give 13.X.X
 $ gcc-14 --version # This will give 14.X.X
 ```
 
-To make `gcc-14` to default, we need to run the following commands
+To make `gcc-14` the default, we need to run the following commands
 ```bash
 $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 60 --slave /usr/bin/g++ g++ /usr/bin/g++-13
 $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-14 40 --slave /usr/bin/g++ g++ /usr/bin/g++-14
@@ -88,7 +88,7 @@ Then
 ```bash
 $ brew install gcc
 ```
-will install gcc version 14 to a system. Still, it will be installed in `/opt/homebrew/bin`. Without adding it to your terminal, you will run a default `gcc`, which is just `clang`.
+will install the gcc version 14 to a system. Still, it will be installed in `/opt/homebrew/bin`. Without adding it to your terminal, you will run a default `gcc`, which is just `clang`.
 
 Thus, you should run the following lines
 ```bash
@@ -99,7 +99,7 @@ $ cd -
 $ echo 'export PATH="/opt/homebrew/bin/;$PATH"' >> .zprofile
 ```
 
-Then, after reopenning the terminal, you will get
+Then, after reopening the terminal, you will get
 ```bash
 $ gcc --version
 ```
