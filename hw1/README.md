@@ -49,7 +49,7 @@ Two thousand twenty three
 where the first and third lines are the input provided by a user, and the second and the last lines are the outputs from your program.
 
 There are also some details you should note:
-* The input is a number between 0 to $10^36$.
+* The input is a number between 0 to $10^{36}$.
 * Do not use hyphen between words. Always use whitespace (' ', U+0020).
 * Do not print period ('.') at the end of the line
 * The first character of the line must be printed in uppercase.
