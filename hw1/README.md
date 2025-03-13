@@ -25,6 +25,7 @@ In this scale, the name and the numbers match as follows:
 |-------------|-----------|
 | Thousand    | $10^{3}$  |
 | Million     | $10^{6}$  |
+| Billion     | $10^{9}$  |
 | Trillion    | $10^{12}$ |
 | Quadrillion | $10^{15}$ |
 | Quintillion | $10^{18}$ |
