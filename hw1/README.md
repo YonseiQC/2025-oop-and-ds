@@ -69,7 +69,7 @@ Twelve million three hundred fourty one thousand two hundread thirty four
 ```
 
 
-## Problem 2: AC (C++)
+## Problem 2: RHT (C++)
 
 **Submit C++ (not C) code for solving this problem**
 
