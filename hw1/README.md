@@ -38,7 +38,7 @@ In this scale, the name and the numbers match as follows:
 
 
 
-Your program must get an input line by line from the standard input (using `std::cin`) and outputs to standard output (using `std::cout`) for each input.
+Your program must get an input line by line from the standard input (using `scanf` or `getline`) and outputs to standard output (using `printf` or `puts`) for each input.
 For example,
 ```
 $ ./your_program
