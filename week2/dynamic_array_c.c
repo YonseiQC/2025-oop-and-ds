@@ -50,5 +50,7 @@ int main() {
 		printf("%d ", dynamic_int_array_at(&arr, i));
 	}
 	printf("\n");
+
+	dynamic_int_array_deallocate(&arr);
 	return 0;
 }
