@@ -1,0 +1,9 @@
+# Ignore everything
+*
+# Except
+!README.md
+!.gitignore
+!*.cpp
+!*.hpp
+!img
+!img/*
