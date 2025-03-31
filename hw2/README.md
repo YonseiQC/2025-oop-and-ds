@@ -47,8 +47,5 @@ In this problem, we consider a simple code that generates code for defining data
 
 
 
-
-
-
-## Problem 3: Sorting integer arrays (C++)
+## Problem 3: Polynomial class
 
