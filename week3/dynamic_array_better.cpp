@@ -21,7 +21,7 @@ public:
 		ptr_ = new int[capacity];
 	}
 
-	DynamicArray(const DynamicArray& other) {
+	DynamicArray(const DynamicArray& other) { // copy constructor
 		length_ = other.length_;
 		capacity_ = other.capacity_;
 		ptr_ = new int[capacity_];
@@ -29,7 +29,7 @@ public:
 		// Don't forget to initialize all member variables!!
 	}
 
-	DynamicArray& operator=(const DynamicArray& other) {
+	DynamicArray& operator=(const DynamicArray& other) { // copy assignment operator
 		delete[] ptr_;
 
 		length_ = other.length_;
@@ -67,6 +67,10 @@ public:
 
 int main() {
 	DynamicArray arr(10); // make dynamic array with capacity = 10
+						  //
+	for (int i = 0; i < 100; i++) {
+		arr.add_elt(i);
+	}
 	
 	DynamicArray arr2 = arr; // calling a copy constructor
 	
