@@ -15,7 +15,7 @@ To stop the program, press Ctrl+C.
 
 **Note: You are only allowed to use pure C. I will compile the code using `gcc` (not `g++`)!**
 
-In this problem, you are asked to write a program that takes a number in decimal form as an input and outputs an English sentence which corresponds to the number.
+In this problem, you are asked to write a program that takes a number in decimal form as input and outputs an English sentence that corresponds to the number.
 
 For example, if the program gets `1234`, then the output will be "One thousand two hundred thirty four".
 We are going to use the short scale, which is used for American English.
@@ -38,7 +38,7 @@ In this scale, the name and the numbers match as follows:
 
 
 
-Your program must get an input line by line from the standard input (using `scanf` or `getline`) and outputs to standard output (using `printf` or `puts`) for each input.
+Your program must get input line by line from the standard input (using `scanf` or `getline`) and output to the standard output (using `printf` or `puts`) for each input.
 For example,
 ```
 $ ./your_program
@@ -50,8 +50,8 @@ Two thousand twenty three
 where the first and third lines are the input provided by a user, and the second and the last lines are the outputs from your program.
 
 There are also some details you should note:
-* The input is a number between 0 to $10^{36}$.
-* Do not use hyphen between words. Always use whitespace (' ', U+0020).
+* The input is a number between 0 and $10^{36}$.
+* Do not use a hyphen between words. Always use whitespace (' ', U+0020).
 * Do not print period ('.') at the end of the line
 * The first character of the line must be printed in uppercase.
 
@@ -73,14 +73,14 @@ Twelve million three hundred fourty one thousand two hundread thirty four
 
 **Submit C++ (not C) code for solving this problem**
 
-We consider simple instructions that modifies the given input array.
+We consider simple instructions that modify the given input array.
 
 * If the instruction is 'R', we reverse the array.
 * If the instruction is 'H', we remove the first element of the array.
 * If the instruction is 'T', we remove the last element of the array.
 
 
-The input has two lines. The first line is the integer array and the second line is the instructions.
+The input has two lines. The first line is the integer array, and the second line is the instructions.
 Again, the input is from the standard input stream (std::cin). For example, running the program using the input
 ```bash
 [1,2,3,4,5]
@@ -91,7 +91,7 @@ will output
 [4,3,2]
 ```
 
-To ease the evaluation, please do **not** use any space between comma and numbers.
+To ease the evaluation, please do **not** use any space between the comma and numbers.
 You can also use the following template:
 ```C++
 std::deque<int> parse_input(const std::string& str) {
@@ -142,10 +142,10 @@ Please submit your code as **pr2.cpp**
 **Submit C++ (not C) code for solving this problem**
 
 
-Write a C++ code that sort the given integer arrays. The sorted arrays should follow:
+Write C++ code that sorts the given integer arrays. The sorted arrays should follow:
 
 * The shorter array appears earlier
-* If two arrays has the same length, the lexicographic ordering must be used, i.e., an array with the smaller element at each index appears earlier.
+* If two arrays have the same length, the lexicographic ordering must be used, i.e., an array with the smaller element at each index appears earlier.
 
 For example, for the given input
 ```
@@ -153,7 +153,7 @@ For example, for the given input
 [3,2,2]
 [3,3,2]
 ```
-the program should output
+the output
 ```
 [3,2,2]
 [3,3,2]
@@ -164,8 +164,9 @@ will be given.
 Again, do not use any space between comma and numbers for the output. The input (output) is taken from the standard input (output) stream. 
 You can also use the `parse_input` function given above.
 
+The input continues until the end of file (EOF) is given.
 
 Please submit your code as **pr3.cpp**
 
 
-Please consider to use [`std::sort`](https://en.cppreference.com/w/cpp/algorithm/sort) with a custom compare function.
+Please consider using [`std::sort`](https://en.cppreference.com/w/cpp/algorithm/sort) with a custom compare function.

@@ -1,4 +1,4 @@
-#include <cstdlib>
+#include <numeric>
 #include <iostream>
 
 class DynamicArray {
@@ -17,11 +17,11 @@ private:
 	}
 
 public:
-	DynamicArray(int capacity = 16) : length_(0), capacity_(capacity) {
+	explicit DynamicArray(int capacity = 16) : length_(0), capacity_(capacity) {
 		ptr_ = new int[capacity];
 	}
 
-	DynamicArray(const DynamicArray& other) { // copy constructor
+	DynamicArray(const DynamicArray& other) {
 		length_ = other.length_;
 		capacity_ = other.capacity_;
 		ptr_ = new int[capacity_];
@@ -29,7 +29,7 @@ public:
 		// Don't forget to initialize all member variables!!
 	}
 
-	DynamicArray& operator=(const DynamicArray& other) { // copy assignment operator
+	DynamicArray& operator=(const DynamicArray& other) {
 		delete[] ptr_;
 
 		length_ = other.length_;
@@ -40,12 +40,16 @@ public:
 		return *this;
 	}
 
-	int get_capacity() {
+	int get_capacity() const {
 		return capacity_;
 	}
 
-	int get_length() {
+	int get_length() const {
 		return length_;
+	}
+
+	int get_elt(int idx) const {
+		return ptr_[idx];
 	}
 
 	void add_elt(int val) {
@@ -55,46 +59,55 @@ public:
 		ptr_[length_++] = val;
 	}
 
-	int get_elt(int idx) {
-		return ptr_[idx];
+	int* begin() {
+		return ptr_;
+	}
+
+	const int* begin() const {
+		return ptr_;
+	}
+
+	int* end() {
+		return ptr_ + length_;
+	}
+
+	const int* end() const {
+		return ptr_ + length_;
 	}
 
 	~DynamicArray() {
 		delete[] ptr_;
 	}
+
+	DynamicArray& operator+=(const DynamicArray& rhs) {
+		for(auto elt: rhs) {
+			add_elt(elt);
+		}
+		return *this;
+	}
 };
 /* Encapsulation */
 
+DynamicArray operator+(const DynamicArray& lhs, const DynamicArray& rhs) {
+	// Add code
+}
+
 int main() {
 	DynamicArray arr(10); // make dynamic array with capacity = 10
-						  //
-	for (int i = 0; i < 100; i++) {
-		arr.add_elt(i);
-	}
 	
-	DynamicArray arr2 = arr; // calling a copy constructor
-	
-	DynamicArray arr3 = arr2;
-	arr3 = arr2; // calling a copy assignment operator
-	
-	std::cout << "arr2[0]: " << arr2.get_elt(0) << '\n';
-	arr3.add_elt(3); // This must not change arr2
-	std::cout << "arr2[0]: " << arr2.get_elt(0) << '\n';
-
-	arr3 = arr2 = arr;
-
-	/*
-	std::cout << arr.get_capacity() << '\n'; // prints 10
-	for(int i = 0; i < 100; i++) {
+	for(int i = 0; i < 10; i++) {
 		arr.add_elt(i);
 	}
 
-	for(int i = 0; i < 100; i++) {
-		std::cout << arr.get_elt(i) << '\t';
-	}
-	std::cout << "New capacity: " << arr.get_capacity() << '\n';
-	std::cout << '\n';
-	*/
+	DynamicArray arr2 = 8; // implicit type conversion
+	DynamicArray arr2(8); // explicit type conversion
+	
+	const DynamicArray arr2 = arr; // calling a copy constructor
+	
+	std::cout << "arr2[0]: " << arr2.get_elt(0) << '\n';
+
+	int sum = std::accumulate(arr2.begin(), arr2.end(), 0);
+	std::cout << "sum: " << sum << '\n';
 
 	return 0;
 }
