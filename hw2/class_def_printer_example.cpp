@@ -3,7 +3,7 @@
 #include <iostream>
 #include <format>
 
-#include "ClassDefPrinter.hpp"
+#include "AbstractClassDefPrinter.hpp"
 
 std::string to_camel_case(std::string str) {
 	std::string camel;
@@ -51,7 +51,7 @@ private:
 			type = "double";
 			break;
 		case DataType::STR:
-			type = "string";
+			type = "String";
 			break;
 		}
 		return std::format("public {} {};", type, to_camel_case(var_name));
