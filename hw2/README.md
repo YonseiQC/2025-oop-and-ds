@@ -72,7 +72,7 @@ my_class.variables.emplace_back(DataType::FLOAT, "RIGHT_EYE_VISION");
 
 This code indicates that we are defining `DriversLicense` class with member names `DRIVER_NAME`, `DRIVER_AGE`, `LEFT_EYE_VISION`, `RIGHT_EYE_VISION` where the type of each variable is STR, INT, FLOAT, FLOAT, respectively.
 
-For this dataclass, we want to have a automatic code generator which outputs the definition of the class for each language.
+For this data class, we want an automatic code generator that outputs the class's definition for each language.
 For example, when we want Java code,
 ```Java
 public class DriversLicense {
@@ -84,7 +84,7 @@ public class DriversLicense {
 ```
 
 Note that `camelCase` is used for each variable name.
-Likewise, we may want C++ and Python version of the class as follows:
+Likewise, we may want the C++ and Python versions of the class as follows:
 ```Cpp
 struct DriversLicense {
     std::string driver_name;
@@ -105,9 +105,8 @@ See Python's [dataclass document](https://docs.python.org/3/library/dataclasses.
 
 
 This type of code can be implemented using **template method pattern**.
-In [AbstractClassDefPrinter.hpp](./AbstractClassDefPrinter.hpp), we defined `AbtractClassDefPrinter` class that defines 
-
-and [class_def_printer_example.cpp](./class_def_printer_example.cpp) files for a code generating the class definition for Java. 
+In [AbstractClassDefPrinter.hpp](./AbstractClassDefPrinter.hpp), we have the `AbstractClassDefPrinter` class that defines basic algorithms for translating the definition of the dataclass to different programming languages.
+Also, see [class_def_printer_example.cpp](./class_def_printer_example.cpp) files for a code generating the class definition for Java. 
 Following this, write down two classes extending (inheriting) `AbstractClassDefPrinter`, named `PythonClassDefPrinter` and `CppClassDefPrinter`.
 
 
