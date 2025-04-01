@@ -52,11 +52,21 @@ public:
 		return ptr_[idx];
 	}
 
-	void add_elt(int val) {
+	void push_back(int val) {
 		if (length_ == capacity_) {
 			double_size();
 		}
 		ptr_[length_++] = val;
+	}
+
+	void insert(int index, int val) {
+		if (length_ == capacity_) {
+			double_size();
+		}
+		for(int i = length; i > index; --i) {
+			ptr_[i + 1] = ptr_[i];
+		}
+		ptr_[index] = val;
 	}
 
 	~DynamicArray() {
