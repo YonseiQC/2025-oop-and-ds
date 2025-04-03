@@ -135,12 +135,12 @@ public:
 where we want to use it as
 ```cpp
 Polynomial p1(std::vector<double>({3.0, 2.0, 5.0})); // p1 = 3.0 + 2.0*x + 5.0*x**2
-Polynomial p2(std::vector<double>({1.5, 0.0, 2.0, 3.0})); // p2 = 1.5 + 2.0*x*82 + 3.0*x**3
+Polynomial p2(std::vector<double>({1.5, 0.0, 2.0, 3.0})); // p2 = 1.5 + 2.0*x**2 + 3.0*x**3
 double v = p1(3.0); // evaluate the polynomial for x=3.0
 auto p3 = p1 * p2; // multiplification of two polynomials
 ```
 For this purpose, we want the `Polynomial` class to have the following member functions:
-* `double operator(double x) const`
+* `double operator()(double x) const`
 * `Polynomial& operator+=(Polynomial& rhs)`
 * `Polynomial& operator-=(Polynomial& rhs)`
 * `Polynomial& operator*=(Polynomial& rhs)`
