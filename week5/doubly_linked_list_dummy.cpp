@@ -2,6 +2,7 @@
 #include <format>
 #include <iostream>
 #include <string>
+#include <list>
 
 template<typename T>
 struct Node {
