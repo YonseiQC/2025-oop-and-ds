@@ -1,6 +1,8 @@
 #include <iostream>
 #include <list>
 #include <stdexcept>
+#include <format>
+#include <functional>
 
 struct Point {
 	double x;
@@ -37,12 +39,17 @@ template<typename T>
 class PriorityQueue {
 private:
 	std::list<T> list_;
+	std::function<bool(const T&, const T&)> func_to_compare_;
 
 public:
+	PriorityQueue(std::function<bool(const T&, const T&)> func_to_compare)
+		: func_to_compare_(func_to_compare) {
+	}
+
 	void push(T elt) {
 		auto it = list_.cbegin();
 		for(;it != list_.cend(); ++it) {
-			if(*it < elt) {
+			if(func_to_compare_(*it, elt)) {
 				// we want to insert an element just before this element
 				break;
 			}
@@ -69,15 +76,19 @@ public:
 };
 
 int main() {
-	PriorityQueue<int> pq;
-	pq.push(10);
-	pq.push(4);
-	pq.push(18);
-	pq.push(8);
-	pq.push(12);
+	auto func = [](const Point& p1, const Point& p2) -> bool {
+		return (p1.x*p1.x + p1.y*p1.y) < (p2.x*p2.x + p2.y*p2.y);
+	};
+	PriorityQueue<Point> pq(func);
+	pq.push(Point{3.0, 2.0});
+	pq.push(Point{-1.0, 3.0});
+	pq.push(Point{2.0, 4.0});
+	pq.push(Point{1.0, 8.0});
+	pq.push(Point{1.0, 7.0});
 
 	while(!pq.is_empty()) {
-		std::cout << pq.top() << '\n'; pq.pop();
+		Point p = pq.top();
+		std::cout << std::format("x: {}, y: {}", p.x, p.y) << '\n'; pq.pop();
 	}
 
 	return 0;

@@ -47,16 +47,24 @@ public:
 	}
 };
 
+struct Book {
+	std::string title;
+	std::string author;
+	int price;
+};
+
+bool operator<(const Book& lhs, const Book& rhs) {
+	return lhs.price < rhs.price;
+}
+
 int main() {
-	PriorityQueue<int> pq;
-	pq.push(10);
-	pq.push(4);
-	pq.push(18);
-	pq.push(8);
-	pq.push(12);
+	PriorityQueue<Book> pq;
+	pq.push(Book{"Title 1", "Young Woo Lee", 190});
+	pq.push(Book{"Title 2", "Jiwoo Ryu", 200});
+	pq.push(Book{"Title 3", "Chae-Yeun Park", 10});
 
 	while(!pq.is_empty()) {
-		std::cout << pq.top() << '\n'; pq.pop();
+		std::cout << pq.top().author << '\n'; pq.pop();
 	}
 
 	return 0;
