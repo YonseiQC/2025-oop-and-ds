@@ -12,13 +12,13 @@ First, in your work directory, run the following commands in your terminal:
 ```bash
 $ wget https://github.com/YonseiQC/2025-oop-and-ds/raw/refs/heads/main/week8/midterm_project_skeleton.tar
 $ tar -xvf midterm_project_skeleton.tar
-$ mv midterm_project_skeleton midterm_project_{your_name}
+$ mv midterm_project_skeleton midterm_project_{student_id}
 ```
-where you need to change `{your_name}` to your real name.
+where you need to change `{student_id}` to your student ID.
 
 After that, run the following script
 ```bash
-$ cd midterm_project_{your_name}
+$ cd midterm_project_{student_id}
 $ mkdir build && cd build
 $ CC=$(which gcc) CXX=$(which g++) cmake ..
 $ make
@@ -31,7 +31,7 @@ This will generate an executable `main` in `build` directory.
 
 Students need to submit a short (at most 1.5 page) report explaining the result of the following tasks.
 
-**Be sure to add your name and student id in the report!**
+**Be sure to add your name and student ID in the report!**
 
 ### Task 1
 
@@ -48,8 +48,8 @@ _To be announced_
 
 ## Some tips on plotting
 
-It would be nice if you could plot a graph for the benchmark results. Of course, you can use Excel or similar program, but I would recommend to use [matplotlib](https://matplotlib.org/) in Python.
-For this purpose, you first can print the output of the benchmark results using [`json` or `csv` format](https://github.com/google/benchmark/blob/main/docs/user_guide.md#output-formats).
+Please plot a graph for the benchmark results. Of course, you can use Excel or a similar program, but I recommend using [matplotlib](https://matplotlib.org/) in Python.
+For this purpose, you can first print the output of the benchmark results using [`json` or `csv` format](https://github.com/google/benchmark/blob/main/docs/user_guide.md#output-formats).
 
 The result can be further processed within Python using [json](https://docs.python.org/3/library/json.html) or [csv](https://docs.python.org/3/library/csv.html) library.
 Using those libraries, you can convert the output data into an array, which can be further plotted using `matplotlib`.
