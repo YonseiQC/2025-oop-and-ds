@@ -21,6 +21,7 @@ After that, run the following script
 $ cd midterm_project_{your_name}
 $ mkdir build && cd build
 $ CC=$(which gcc) CXX=$(which g++) cmake ..
+$ make
 ```
 
 This will generate an executable `main` in `build` directory.
