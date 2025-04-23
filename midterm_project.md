@@ -1,10 +1,18 @@
 # Midterm Project
 
-## Prerequisite for MacOS
+## Prerequisites
+
+### MacOS
 If you are using MacOS, please run the following commands before proceeding:
 ```bash
 $ brew install wget
 $ brew install cmake
+```
+
+### WSL Ubuntu
+For Ubuntu, running the following commands is sufficient:
+```bash
+$ sudo apt install cmake
 ```
 
 ## Setup
