@@ -1,7 +1,14 @@
 # Midterm Project
 
+## Prerequisite for MacOS
+If you are using MacOS, please run the following commands before proceeding:
+```bash
+$ brew install wget
+$ brew install cmake
+```
+
 ## Setup
-First, in your work directory, run the following in your terminal:
+First, in your work directory, run the following commands in your terminal:
 ```bash
 $ wget https://github.com/YonseiQC/2025-oop-and-ds/raw/refs/heads/main/week8/midterm_project_skeleton.tar
 $ tar -xvf midterm_project_skeleton.tar
@@ -13,7 +20,7 @@ After that, run the following script
 ```bash
 $ cd midterm_project_{your_name}
 $ mkdir build && cd build
-$ cmake ..
+$ CC=$(which gcc) CXX=$(which g++) cmake ..
 ```
 
 This will generate an executable `main` in `build` directory.
