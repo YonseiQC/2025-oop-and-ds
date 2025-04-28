@@ -27,15 +27,31 @@ Students need to submit a short (at most 1.5 page) report explaining the result 
 
 ### Task 1
 
-_To be announced_
+In this task, we want to compare the performance of `std::vector` and `std::list`.
+Insert 10 to 100'000 `int` values to the back of each data structure (using `push_back`) and discuss which one is faster.
+Now, insert 10 to 100'000 `int` values to the front of each class (using `push_front`) and discuss which one is faster.
+Can you explain the different between those results?
+
 
 ### Task 2
+Here, we want to compare the performance of merge sort and insertion sort.
+You can use the code used the class.
 
-_To be announced_
+We prepare the initial array as follows:
+
+* The array has $n$ elements.
+* The array except $k$ continuous elements are already sorted in increasing order ($k \leq n$), where the starting index of this interval is random.
+* Those $k$ continuous elements are sorted in decreasing order.
+
+For each $k\in\{8, 16, 32, 64, 128, 256\}$ and $n$ from $64$ to $131,072$ (by a factor of 2), run each sorting algorithm on this array.
+Discuss that how the results changes as $n$ and $k$ changes.
 
 ### Task 3
 
-_To be announced_
+Choose a recursion algorithm discussed in the class and make a loop version of it using a stack.
+Compare the performance of these implementations. Discuss which one is faster.
+
+_Note: _ There will be bonus points if the recursion algorithm is not (tail-recursive)[https://en.wikipedia.org/wiki/Tail_call].
 
 
 ## Some tips on plotting

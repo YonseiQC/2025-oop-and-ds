@@ -8,7 +8,7 @@ private:
 	int capacity_;
 
 	void double_size() {
-		int* new_ptr = (int*)malloc(sizeof(int) * 2 * capacity_);
+		int* new_ptr = new int[2 * capacity_];
 		for(int i = 0; i < length_; i++) {
 			new_ptr[i] = ptr_[i];
 		}
