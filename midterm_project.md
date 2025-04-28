@@ -70,6 +70,14 @@ Compare the performance of these implementations. Discuss which one is faster.
 _Note:_ There will be bonus points if the recursion algorithm is not [tail-recursive](https://en.wikipedia.org/wiki/Tail_call).
 
 
+## Submission
+Submit your code and report to LearnUs. When submitting, the source code directory must be zip-compressed. In the terminal, you can use
+```bash
+$ zip midterm_project_{student_id}.zip midterm_project_{student_id}
+```
+
+**Please remove `build` directory before compressing to reduce the file size**
+
 ## Some tips on plotting
 
 Please plot a graph for the benchmark results. Of course, you can use Excel or a similar program, but I recommend using [matplotlib](https://matplotlib.org/) in Python.
