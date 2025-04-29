@@ -97,10 +97,13 @@ plt.show()
 
 _Note_: You might install matplotlib and python3.*-tk beforehand using `pip install matplotlib` and `sudo apt install python3.{version}-tk`.
 
-If you want to save the figure instead of showing it, just change to last line to
+If you want to save the figure instead of showing it, just change the last line to
 ```python
 plt.savefig('plot.png')
 ```
 
 ## Google benchmark tips
 You can find all relevant information in [Google Benchmark User Guide](https://github.com/google/benchmark/blob/main/docs/user_guide.md).
+
+## Additional tips
+* If you are using C++20 features, add `set(CXX_STANDARD 20)` to `CMakeLists.txt` just below line 3: `project(2025-OOPDS-Midterm)`.
