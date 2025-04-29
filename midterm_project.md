@@ -51,7 +51,7 @@ Can you explain the difference between those results?
 
 ### Task 2
 Here, we want to compare the performance of merge sort and insertion sort.
-You can use the code in the class.
+You can use the code in the class (see [code for week 6](https://github.com/YonseiQC/2025-oop-and-ds/tree/main/week6)).
 
 We prepare the initial array as follows:
 
