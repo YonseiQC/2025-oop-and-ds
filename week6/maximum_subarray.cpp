@@ -18,7 +18,7 @@ auto find_maximum_crossing_subarray(int* arr, int low, int mid, int high)
 		}
 	}
 
-	int right_sum = std::numeric_limits<int>::min();
+	int right_sum = 0;
 	int max_right = mid+1;
 	sum = 0;
 	for(int j = mid+1; j < high; j++) {
@@ -47,7 +47,7 @@ std::tuple<int, int, int> find_maximum_subarray(int* arr, int low, int high) {
 		return std::make_tuple(left_low, left_high, left_sum);
 	}
 	if(right_sum > left_sum && right_sum > cross_sum) {
-		return std::make_tuple(right_low, right_high, left_sum);
+		return std::make_tuple(right_low, right_high, right_sum);
 	}
 	return std::make_tuple(cross_low, cross_high, cross_sum);
 }
