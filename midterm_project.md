@@ -46,12 +46,12 @@ Students need to submit a short (at most 1.5 page) report explaining the result 
 In this task, we want to compare the performance of `std::vector` and `std::list`.
 Insert 10 to 100'000 `int` values to the back of each data structure (using `push_back`) and discuss which one is faster.
 Now, insert 10 to 100'000 `int` values to the front of each class (using `push_front`) and discuss which one is faster.
-Can you explain the different between those results?
+Can you explain the difference between those results?
 
 
 ### Task 2
 Here, we want to compare the performance of merge sort and insertion sort.
-You can use the code used the class.
+You can use the code in the class (see [code for week 6](https://github.com/YonseiQC/2025-oop-and-ds/tree/main/week6)).
 
 We prepare the initial array as follows:
 
@@ -60,15 +60,23 @@ We prepare the initial array as follows:
 * Those $k$ continuous elements are sorted in decreasing order.
 
 For each $k\in\{8, 16, 32, 64, 128, 256\}$ and $n$ from $64$ to $131,072$ (by a factor of 2), run each sorting algorithm on this array.
-Discuss that how the results changes as $n$ and $k$ changes.
+Discuss how the results change as $n$ and $k$ change.
 
 ### Task 3
 
 Choose a recursion algorithm discussed in the class and make a loop version of it using a stack.
 Compare the performance of these implementations. Discuss which one is faster.
 
-_Note: _ There will be bonus points if the recursion algorithm is not (tail-recursive)[https://en.wikipedia.org/wiki/Tail_call].
+_Note:_ There will be bonus points if the recursion algorithm is not [tail-recursive](https://en.wikipedia.org/wiki/Tail_call).
 
+
+## Submission
+Submit your code and report to LearnUs. When submitting, the source code directory must be zip-compressed. In the terminal, you can use
+```bash
+$ zip midterm_project_{student_id}.zip midterm_project_{student_id}
+```
+
+**Please remove `build` directory before compressing to reduce the file size**
 
 ## Some tips on plotting
 
@@ -89,10 +97,13 @@ plt.show()
 
 _Note_: You might install matplotlib and python3.*-tk beforehand using `pip install matplotlib` and `sudo apt install python3.{version}-tk`.
 
-If you want to save the figure instead of showing it, just change to last line to
+If you want to save the figure instead of showing it, just change the last line to
 ```python
 plt.savefig('plot.png')
 ```
 
 ## Google benchmark tips
 You can find all relevant information in [Google Benchmark User Guide](https://github.com/google/benchmark/blob/main/docs/user_guide.md).
+
+## Additional tips
+* If you are using C++20 features, add `set(CXX_STANDARD 20)` to `CMakeLists.txt` just below line 3: `project(2025-OOPDS-Midterm)`.
