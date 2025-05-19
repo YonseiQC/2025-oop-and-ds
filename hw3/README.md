@@ -1,4 +1,4 @@
-# Homework 2
+# Homework 3
 
 ### Due Date: June 2nd (Mon) 11:59 PM
 
