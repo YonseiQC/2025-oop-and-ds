@@ -27,7 +27,7 @@ However, the furnace in Minsoo's spaceship does not have unlimited energy, so hi
 Help Minsoo to merge Uru pieces!
 
 <figure>
-<img src="./img/UruMelting.png" style="width=7em">
+<img src="./img/UruMelting.png" style="width: 40em">
 <figcaption>Melting Uru in furnace</figcaption>
 </figure>
 
@@ -80,7 +80,9 @@ Please submit a single file named `pr1.cpp`.
 
 In the class, we have introduced the *parenthetic* representation of a tree.
 For example, a tree $T$ given in 
-<img src="img/tree_example.png" style="width: 7em;">
+
+<img src="img/tree_example.png" style="width: 40em;">
+
 can be represented as
 ```
 Electronics R'Us (
@@ -157,7 +159,7 @@ Electronics R' Us
 **Input**
 
 All elements are strings, but each string may contain a space.
-When a node has children, the line ends with an opening parentheses `(`.
+When a node has children, the corresponding line ends with an opening parentheses `(`.
 Closing parentheses `)` do not appear with other characters in a single line.
 
 **Output**
@@ -170,7 +172,7 @@ After printing each node, please add the new line '\n'.
 In the class, we showed a simple implementation of a binary search tree where each node only contains its value and pointers to its left and right children. 
 However, such a simple implementation does not allow one to traverse the tree when only a single pointer to a node is provided.
 
-So, in this problem, we would like to implement a binary search tree where each node also has a pointer to its parent. Using this, we can also implement a meaningful *iterator*, where iterating over all tree nodes gives the same result as the *inorder* traversal.
+In this problem, we would like to implement a binary search tree where each node also has a pointer to its parent. Using this, we can also implement a meaningful iterator, where iterating over all tree nodes gives the same result as the inorder traversal.
 
 Note that, in our implementation, all leaf (external) nodes are placeholders, i.e., they do not have meaningful values. So, we only want to visit all internal nodes when iterating over the tree.
 
@@ -205,4 +207,4 @@ for(auto it = btree.begin(); it != btree.end(); ++it) {
 ### Guide
 Use the provided [`binary_search_tree.hpp` file](./binary_search_tree.cpp). Add your code in the functions with a comment `Implement here`. 
 
-Please submit this file without changing the name, i.e., use the file name `binary_search_tree.hpp`.
+Please submit this file without changing its name; Use the file name `binary_search_tree.hpp`.
