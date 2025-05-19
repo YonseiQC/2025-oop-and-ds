@@ -66,9 +66,9 @@ For each test case, output the minimum possible energy calculated after merging 
 
 **Explanation**
 
-For the first input, we merge the first two pieces which requires energy `1+2=3`, resulting a piece with weight 3 gram. Now, merging two pieces of 3 gram requires energy of $3+3=6$. Thus, the total amount of energy is `3+6=9`.
+For the first input, we merge the first two pieces, which requires energy `1+2=3`, resulting in a piece with a weight of 3 grams. Now, merging two pieces of 3 grams requires energy of $3+3=6$. Thus, the total amount of energy is `3+6=9`.
 
-For the second input, we merge the first two pieces which requires energy `3+4=7`, resulting a piece with weight 7 gram. Now, merging this 7 gram one with 5 gram one will give a piece of 12 gram, which requires energy `12`. Lastly, merging this with 8 gram one will takes energy `20`. In total, we need `7+12+20=39`.
+For the second input, we merge the first two pieces, which requires energy `3+4=7`, resulting in a piece weighing 7 grams. Now, merging this 7-gram piece with a 5-gram piece will give a piece weighing 12 grams, which requires energy `12`. Lastly, merging this with an 8-gram piece will take energy `20`. In total, we need `7+12+20=39`.
 
 
 *Hint*: You can use `std::priority_queue`
@@ -157,20 +157,20 @@ Electronics R' Us
 **Input**
 
 All elements are strings, but each string may contain a space.
-When a node has children, the line ends with a opening parentheses `(`.
-Closing parentheses `)` does not appear with other characters in a single line.
+When a node has children, the line ends with an opening parentheses `(`.
+Closing parentheses `)` do not appear with other characters in a single line.
 
 **Output**
 
-After printing each node, please add new line.
+After printing each node, please add the new line '\n'.
 
 
 ## Problem 3: Iterator support of binary search tree
 
 In the class, we showed a simple implementation of a binary search tree where each node only contains its value and pointers to its left and right children. 
-However, such a simple implementation does not allow one to transverse the tree when only a single pointer to a node is provided.
+However, such a simple implementation does not allow one to traverse the tree when only a single pointer to a node is provided.
 
-Thus, in this problem, we want to implement a binary search tree where each node also has a pointer to its parent. Using this, we can also implement a meaningful *iterator*, where iterating over all tree nodes give the same result as the *inorder* traversal.
+So, in this problem, we would like to implement a binary search tree where each node also has a pointer to its parent. Using this, we can also implement a meaningful *iterator*, where iterating over all tree nodes gives the same result as the *inorder* traversal.
 
 Note that, in our implementation, all leaf (external) nodes are placeholders, i.e., they do not have meaningful values. So, we only want to visit all internal nodes when iterating over the tree.
 
@@ -205,4 +205,4 @@ for(auto it = btree.begin(); it != btree.end(); ++it) {
 ### Guide
 Use the provided [`binary_search_tree.hpp` file](./binary_search_tree.cpp). Add your code in the functions with a comment `Implement here`. 
 
-Please submit this file without changing the name, i.e., use file name `binary_search_tree.hpp`.
+Please submit this file without changing the name, i.e., use the file name `binary_search_tree.hpp`.
