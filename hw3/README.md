@@ -109,7 +109,7 @@ Write a program that prints the result of postorder reversal when a *parenthetic
 Please submit a single file named `pr2.cpp`.
 
 ### Example
-*input*
+**input**
 ```
 Electronics R'Us (
 R&D
@@ -132,7 +132,7 @@ Tuner
 )
 ```
 
-*output*
+**output**
 ```
 R&D
 Domestic
