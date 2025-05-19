@@ -205,6 +205,6 @@ for(auto it = btree.begin(); it != btree.end(); ++it) {
 ```
 
 ### Guide
-Use the provided [`binary_search_tree.hpp` file](./binary_search_tree.cpp). Add your code in the functions with a comment `Implement here`. 
+Use the provided [`binary_search_tree.hpp` file](./binary_search_tree.hpp). Add your code in the functions with a comment `Implement here`. 
 
 Please submit this file without changing its name; Use the file name `binary_search_tree.hpp`.
