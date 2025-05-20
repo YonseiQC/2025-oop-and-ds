@@ -155,7 +155,7 @@ International
 Sales
 Purchasing
 TV
-cd
+CD
 Tuner
 Manufacturing
 Electronics R' Us
