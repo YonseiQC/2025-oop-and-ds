@@ -51,7 +51,7 @@ For each test case, output the minimum possible energy calculated after merging 
 3
 3
 1 2 3
-5
+4
 3 4 5 8
 1
 9
