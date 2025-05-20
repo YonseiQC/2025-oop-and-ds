@@ -93,7 +93,10 @@ International (
 Canada
 S.America
 Overseas (
-Africa Europe Asia Australia
+Africa
+Europe
+Asia
+Australia
 )
 )
 )
