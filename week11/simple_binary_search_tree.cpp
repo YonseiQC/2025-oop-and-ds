@@ -70,8 +70,9 @@ public:
 		return false;
 	}
 
-	void remove_elt(T value) {
+	bool remove_elt(T value) {
 		// Home work
+		// return false if an element with `value` does not exist
 	}
 
 	~BinarySearchTree() {
